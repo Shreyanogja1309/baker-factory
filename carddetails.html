@@ -1,0 +1,150 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script type = "text/javascript">
+         function validate() {
+      
+         if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+	 if( document.myForm.no.value == "" ) {
+            alert( "Please provide card number!" );
+            document.myForm.no.focus() ;
+            return false;
+         }
+	 if( document.myForm.vt.value == "" ) {
+            alert( "This is a required field" );
+            document.myForm.vt.focus() ;
+            return false;
+         }
+	 if( document.myForm.cvv.value == "" ) {
+            alert( "Please provide CVV!" );
+            document.myForm.cvv.focus() ;
+            return false;
+         }
+
+
+
+ return( true );
+      }
+      </script>  
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
+
+    
+    <title>CARD DETAILS</title>
+<style>
+body{
+ background-image: url("images/bhavik.jpg");
+background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+
+}
+		
+.a{
+	font-family: "Times New Roman";
+	 font-size: 3rem;
+  }
+</style>
+
+    
+</head>
+<body >
+<div class="container" style="background-color: ;">
+<!-- <h1 style="color: light;">Card Details :</h1>-->
+<p class="a">CARD DETAILS:</p>
+    <form action = "/cgi-bin/test.cgi" name = "myForm">
+    <div class="row">
+        <div class="form-group col-lg-6">
+            <label>Name Of The Card Holder : *</label>
+            <input type="text" class="form-control" placeholder=" Name" required="true" id = "c1" name = "Name">
+        </div>
+		</div>
+        
+        <body  ng-app>
+
+
+            <label>Card Type : * </label>
+	
+            <input type="radio" value="Credit" ng-model="ps">Credit
+            <input type="radio" value="Debit" ng-model="ps">Debit
+            &nbsp;
+            <input type="text" id="gender"  ng-model="ps" id= "c2"> 
+	
+        
+        
+        
+
+        
+        
+        
+        
+        <div class="row">
+        <div class="form-group col-lg-6">
+             <label>Card Number : *</label>
+            <input type="number" class="form-control" id="lname" placeholder="1234 5678 9238 7890" required="true" name="no"  min ="100000000000000" max="9999999999999999"/>
+        </div>
+        </div>
+
+       
+        
+        <div class="row">
+          <div class="form-group col-lg-6">
+            <label > Valid Through : *</label> 
+             <input type="" class="form-control" placeholder=" MM\YY" required="true" name ="vt"> 
+            </div>
+       </div> 
+	       
+            
+        <div class="row">
+        <div class="form-group col-lg-6">
+            <label> CVV : * </label>
+            <input type="number" class="form-control" placeholder=" 123"required="true" name ="cvv" min="001" max="999" /><br>
+            <p> Your card details will be stored securely for your convenience. We do not store CVV.</p>
+        </div>
+        </div>       
+      
+            <div class="form-group row">
+	<div class="col-sm-12 mx-auto">
+	<div class="checkbox">
+ 	 <label><input type="checkbox" value=""> Save this card for future payment </label>
+    </div>
+	</div>  
+        </div>
+           
+          
+              <p>MODES FOR PAYMENT</p>
+			  <img src="images/phone.jpg" width="56" height="60" alt="" />
+              <img src="images/google.jpg" width="56" height="60" alt="" />
+              <img src="images/paytm.jpg" width="56" height="60" alt="" />
+         
+        </div>
+	
+	<div style="padding-top: 20px; padding-right: 1090px; padding-bottom: 50px; text-align: right;">
+	<p>	SCAN DIRECTLY :</p>
+	
+     <img src="img/13.jpg" width="120" height="120" alt="" />
+	 </tr>
+       	</div>
+	
+	<div class="form-group row">
+	<div class="col-sm-2 mx-auto">
+      <button type="submit" class="btn btn-success" formaction="payment.html" onclick="return(validate());">PAY</button>
+        
+</div>
+</div>
+    </form>      
+</body>
+</html>

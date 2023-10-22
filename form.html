@@ -1,0 +1,158 @@
+<html>
+<head>
+	<title>Form</title>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+	<script src="form.js"></script>
+	
+	 <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>	
+	  
+    
+    <title>Login</title>
+   
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Piedra&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+	<style>
+body {
+  background: url("Images/9.jpg");
+  background-size: 90%;
+  height: 100vh !important;	
+   		
+}
+
+.container {
+  height: 100% !important; 	
+}
+
+.login-container {
+  position: relative;
+  left: 20%;
+  height: 100%;
+  background-color: white;
+  padding: 2% 5% !important;
+}
+
+h1 {
+ font-family: "Times New Roman", Times, sans-serif";
+}
+
+input {
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  outline: none !important;
+}
+
+.info-container {
+  color: white;
+  padding: 5% 10% 10%;
+  text-align: center;
+  line-height: 2;
+  font-size: 1.5rem;	
+}
+
+.a {
+  margin-left: 50px;
+  font-size: 3rem;
+  color: black;
+  font-family: "Edwardian Script ITC";
+}
+		  
+.message {
+  margin-left: 75px;
+  margin-top: -25px;	
+  font-size: 1.2rem;
+  color: deeppink;
+  font-family: "Times New Roman";
+}
+
+.info-container h1 {
+  font-size: 3rem !important;
+  margin: 30px 0 0 100px !important;
+  color: black;	
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.login-img {
+  margin-left: 37%;
+  margin-bottom: 6%;
+  margin-top: -3%;	
+}
+
+.logo {
+  margin-left: 80px;
+}
+		
+
+</style>
+	
+  </head>
+  <body>
+    <div class="container row">
+      <div class="info-container col-lg-6">
+
+
+        <p class="a">
+           Bonheur Patisserie</p>
+      
+        <p class="message">
+          “Pour Lamour du Gout,<br>
+		  LOVE FOR TASTE!	
+        </p>
+      </div>
+      <div class="login-container col-lg-6">
+        <h1 class="text-center mb-4 mr-3">Login</h1>
+        <img src="Images/24.jpg" alt="logo" class="login-img" />
+<!--        -->
+          <div class="form-group">
+			  
+		  <label for="email"><b>Enter Email:</b></label>	
+	 <input type="email" placeholder="Enter Email Id" name="email" class="form-control"  id="email" required/>
+			</div>
+		<br>
+		<div class="form-group">
+		<label><b>Enter Password:</b></label>	
+	 <input type="password" placeholder="Enter Password" class="form-control"  id="password" required/>
+		  </div>	
+			<br>
+			 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+	 
+		<button onclick="signUp()" class="btn btn-success" id="signUp">Sign Up</button>
+		<button onclick="signIn()" class="btn btn-success" id="signIn">Login</button>
+		
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+	
+	
+	
+	
+	
+	
+
